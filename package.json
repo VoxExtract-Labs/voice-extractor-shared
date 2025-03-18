@@ -1,0 +1,19 @@
+{
+    "name": "voice-extractor-shared",
+    "module": "./src/index.ts",
+    "type": "module",
+    "scripts": {
+        "lint": "bun biome check",
+        "lint:fix": "bun biome check --write"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@commitlint/cli": "^19.8.0",
+        "@commitlint/config-conventional": "^19.8.0",
+        "@types/bun": "latest",
+        "lefthook": "^1.11.3"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
