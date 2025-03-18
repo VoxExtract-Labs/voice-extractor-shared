@@ -1,0 +1,8 @@
+torch
+torchvision
+torchaudio
+numpy<2.0
+yt-dlp
+faster-whisper
+demucs
+pyannote.audio
