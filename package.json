@@ -13,7 +13,7 @@
     "module": "./src/index.ts",
     "type": "module",
     "bin": {
-        "create-voice-extractor-symlinks": "./scripts/create-symlinks.js"
+        "create-voice-extractor-symlinks": "./scripts/create-symlinks.mjs"
     },
     "scripts": {
         "lint": "bun biome check",
