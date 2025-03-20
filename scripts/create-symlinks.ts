@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 import { existsSync, symlinkSync } from 'node:fs';
 import { join } from 'node:path';
-import prompts from '@inquirer/prompts';
+import { confirm } from '@inquirer/prompts';
 
 (async () => {
     // Determine the root of the consuming project (assumes the script is run from the project root)
@@ -24,14 +24,12 @@ import prompts from '@inquirer/prompts';
         }
 
         // Ask the user for confirmation
-        const response = await prompts({
-            type: 'confirm',
-            name: 'create',
+        const confirmed = await confirm({
             message: `Create symlink for ${file}: ${target} -> ${source}?`,
-            initial: true,
+            default: false,
         });
 
-        if (response.create) {
+        if (confirmed) {
             try {
                 symlinkSync(source, target, 'file');
                 console.log(`Created symlink for ${file}: ${target} -> ${source}`);
