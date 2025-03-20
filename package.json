@@ -13,7 +13,8 @@
     "module": "./src/index.ts",
     "type": "module",
     "bin": {
-        "create-voice-extractor-symlinks": "./scripts/create-symlinks.ts"
+        "create-voice-extractor-symlinks": "./scripts/create-symlinks.ts",
+        "create-voice-extractor-copy": "./scripts/create-copies.ts"
     },
     "scripts": {
         "lint": "bun biome check",
@@ -25,6 +26,7 @@
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
         "@types/bun": "latest",
+        "@types/fs-extra": "^11.0.4",
         "lefthook": "^1.11.3"
     },
     "peerDependencies": {
@@ -36,6 +38,7 @@
     },
     "license": "UNLICENSED",
     "dependencies": {
-        "@inquirer/prompts": "^7.4.0"
+        "@inquirer/prompts": "^7.4.0",
+        "fs-extra": "^11.3.0"
     }
 }
