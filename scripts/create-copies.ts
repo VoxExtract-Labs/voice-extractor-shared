@@ -11,7 +11,7 @@ import fs from 'fs-extra';
     const sharedConfigDir = join(__dirname, '..', 'config');
 
     // Files to symlink
-    const files = ['biome.json', 'commitlint.config.cjs', 'lefthook.yml'];
+    const files = ['biome.json', 'commitlint.config.cjs', 'lefthook.yml', '.coderabbit.yaml'];
 
     for (const file of files) {
         const target = join(projectRoot, file);
