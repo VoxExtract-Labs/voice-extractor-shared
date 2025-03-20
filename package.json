@@ -1,19 +1,39 @@
 {
     "name": "voice-extractor-shared",
+    "version": "1.0.0",
+    "description": "Centralized hub for shared configurations, dependencies, and Docker build files for VoxExtract Labs projects.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VoxExtract-Labs/voice-extractor-shared.git"
+    },
+    "homepage": "https://github.com/VoxExtract-Labs/voice-extractor-shared",
+    "bugs": {
+        "url": "https://github.com/VoxExtract-Labs/voice-extractor-shared/issues"
+    },
     "module": "./src/index.ts",
     "type": "module",
+    "bin": {
+        "create-voice-extractor-symlinks": "./scripts/create-symlinks.js"
+    },
     "scripts": {
         "lint": "bun biome check",
-        "lint:fix": "bun biome check --write"
+        "lint:fix": "bun biome check --write",
+        "prepare": "bun biome check"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
+        "@inquirer/prompts": "^7.4.0",
         "@types/bun": "latest",
         "lefthook": "^1.11.3"
     },
     "peerDependencies": {
         "typescript": "^5.0.0"
-    }
+    },
+    "engines": {
+        "node": ">=16.0.0",
+        "bun": ">=0.7.0"
+    },
+    "license": "UNLICENSED"
 }
